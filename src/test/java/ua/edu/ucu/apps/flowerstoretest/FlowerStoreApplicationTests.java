@@ -1,10 +1,10 @@
-package ua.edu.ucu.apps.lab7;
+package ua.edu.ucu.apps.flowerstoretest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Lab7ApplicationTests {
+class FlowerStoreApplicationTests {
 
 	@Test
 	void contextLoads() {

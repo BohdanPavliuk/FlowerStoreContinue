@@ -1,12 +1,12 @@
-package ua.edu.ucu.apps.lab7;
+package ua.edu.ucu.apps.flowerstore;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Lab7Application {
+public class FlowerStoreApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Lab7Application.class, args);
+		SpringApplication.run(FlowerStoreApplication.class, args);
 	}
 }

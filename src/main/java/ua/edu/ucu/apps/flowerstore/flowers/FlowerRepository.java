@@ -1,4 +1,4 @@
-package ua.edu.ucu.apps.lab7.flowers;
+package ua.edu.ucu.apps.flowerstore.flowers;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,4 +1,4 @@
-package ua.edu.ucu.apps.lab7.flowers;
+package ua.edu.ucu.apps.flowerstore.flowers;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public class FLowerController {
 	}
 
     @GetMapping("/list/")
-	public List<Flower> hello(){
+	public List<Flower> hello() {
 		return flowerService.getFlowers();
 	}
 
