@@ -13,12 +13,13 @@ import ua.edu.ucu.apps.flowerstore.order.Order;
 public class DeliveryController {
     
     @GetMapping("/")
-    public String whatNext(){
-        return "If you are using DHL delivery add /dhl to your URL if Post method add /navaposhta";
+    public String whatNext() {
+        return "If you are using DHL delivery" +
+        " add /dhl to your URL if Post method add /navaposhta";
     }
 
     @GetMapping("/dhl")
-    public String DHLDelivery(){
+    public String dHLDelivery() {
         Order order = new Order();
         List<Order> orders = List.of(order);
         DHLDeliveryStrategy deliveryStrategy = new DHLDeliveryStrategy();
@@ -26,7 +27,7 @@ public class DeliveryController {
     }
 
     @GetMapping("/novaposhta")
-    public String PostDelivery(){
+    public String postDelivery() {
         Order order = new Order();
         List<Order> orders = List.of(order);
         PostDeliveryStrategy deliveryStrategy = new PostDeliveryStrategy();

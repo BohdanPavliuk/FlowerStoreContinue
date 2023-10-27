@@ -15,19 +15,23 @@ public class DeliveryTest {
     private PostDeliveryStrategy postDelivery;
 
     @BeforeEach
-    public void init(){
+    public void init() {
         dhlDelivery = new DHLDeliveryStrategy();
         postDelivery = new PostDeliveryStrategy();
     }
 
     @Test
-    public void testDelivery(){
-        Order order1 = new Order();
-        Order order2 = new Order();
-        Order order3 = new Order();
-        List<Order> ordersPost = List.of(order1, order2);
-        List<Order> ordersDHL = List.of(order1, order2, order3);
-        Assertions.assertEquals("We are delivery your 2 items by Nova Poshta", postDelivery.orderDelivery(ordersPost)); 
-        Assertions.assertEquals("We are delivery your 3 items by DHL", dhlDelivery.orderDelivery(ordersDHL)); 
+    public void testDelivery() {
+        Order orderFirst = new Order();
+        Order orderSecond = new Order();
+        Order orderThird = new Order();
+        List<Order> ordersPost = List.of(orderFirst, orderSecond);
+        List<Order> ordersDHL = List.of(orderFirst, orderSecond, orderThird);
+        String testEqualsFirst = "We are delivery your 2 items by Nova Poshta";
+        String realFirst = postDelivery.orderDelivery(ordersPost);
+        String testEqualsSecond  = "We are delivery your 3 items by DHL";
+        String realSecond = dhlDelivery.orderDelivery(ordersDHL);
+        Assertions.assertEquals(testEqualsFirst, realFirst); 
+        Assertions.assertEquals(testEqualsSecond, realSecond); 
     }
 }

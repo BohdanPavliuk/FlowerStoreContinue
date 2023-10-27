@@ -15,7 +15,7 @@ public class FLowerController {
 	private final FlowerService flowerService;
 
 	@Autowired
-	public FLowerController(FlowerService flowerService){
+	public FLowerController(FlowerService flowerService) {
 		this.flowerService = flowerService;
 	}
 
@@ -25,7 +25,7 @@ public class FLowerController {
 	}
 
 	@PostMapping("/add/")
-	public void addFlower(@RequestBody Flower flower){
+	public void addFlower(@RequestBody Flower flower) {
 		flowerService.add(flower);
 	}
 }

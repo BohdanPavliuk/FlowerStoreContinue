@@ -11,16 +11,18 @@ public class PaymentStrategyTest {
     private PayPalPaymentStrategy payPalPayment;
     private CreditCardPaymentStrategy cardPayment;
     @BeforeEach
-    public void init(){
+    public void init() {
         payPalPayment = new PayPalPaymentStrategy();
         cardPayment = new CreditCardPaymentStrategy();
     }
 
     @Test
-    public void testPayment(){
-        String payment = payPalPayment.pay(1000);
+    public void testPayment() {
+        double price = 1000;
+        String payment = payPalPayment.pay(price);
+        String testEquals = "Paying 1000.0 tugrykiv by credit card";
         Assertions.assertEquals("Paying 1000.0 tugrykiv by paypal", payment);
-        Assertions.assertEquals("Paying 1000.0 tugrykiv by credit card", cardPayment.pay(1000));
+        Assertions.assertEquals(testEquals, cardPayment.pay(price));
         
     }
 }

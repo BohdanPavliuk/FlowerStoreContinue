@@ -9,18 +9,21 @@ import org.springframework.web.bind.annotation.RestController;
 public class PaymentController {
 
     @GetMapping("/")
-    String whatNext(){
-        return "If you want to pay by credit card add card/ to your URL if by paypal paypal/";
+    String whatNext() {
+        return "If you want to pay by credit card" + 
+        " add card/ to your URL if by paypal paypal/";
     }
     @GetMapping("/paypal/")
-    public String paymentPayPal(){
+    public String paymentPayPal() {
         PayPalPaymentStrategy method = new PayPalPaymentStrategy();
-        return method.pay(1000);
+        double price = 1000;
+        return method.pay(price);
     }
 
     @GetMapping("/card/")
-    public String paymentCard(){
+    public String paymentCard() {
         CreditCardPaymentStrategy method = new CreditCardPaymentStrategy();
-        return method.pay(1000);
+        double price = 1000;
+        return method.pay(price);
     }
 }
