@@ -7,6 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FlowerStoreApplication {
 
     public static void main(String[] args) {
-		SpringApplication.run(FlowerStoreApplication.class, args);
-	}
+        SpringApplication.run(FlowerStoreApplication.class, args);
+    }
 }

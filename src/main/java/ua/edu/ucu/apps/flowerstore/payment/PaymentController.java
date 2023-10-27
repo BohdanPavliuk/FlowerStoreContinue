@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/payment")
 public class PaymentController {
-    private static final int checkPrice = 1000;
+    private static final int CHECKPRICE = 1000;
     @GetMapping("/")
     String whatNext() {
         return "If you want to pay by credit card"
@@ -16,12 +16,12 @@ public class PaymentController {
     @GetMapping("/paypal/")
     public String paymentPayPal() {
         PayPalPaymentStrategy method = new PayPalPaymentStrategy();
-        return method.pay(checkPrice);
+        return method.pay(CHECKPRICE);
     }
 
     @GetMapping("/card/")
     public String paymentCard() {
         CreditCardPaymentStrategy method = new CreditCardPaymentStrategy();
-        return method.pay(checkPrice);
+        return method.pay(CHECKPRICE);
     }
 }

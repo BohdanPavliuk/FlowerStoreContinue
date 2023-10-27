@@ -14,18 +14,18 @@ import org.springframework.web.bind.annotation.RestController;
 public class FLowerController {
     private final FlowerService flowerService;
 
-	@Autowired
-	public FLowerController(FlowerService flowerService) {
-		this.flowerService = flowerService;
-	}
+@Autowired
+    public FLowerController(FlowerService flowerService) {
+        this.flowerService = flowerService;
+    }
 
     @GetMapping("/list/")
-	public List<Flower> hello() {
-		return flowerService.getFlowers();
-	}
+    public List<Flower> hello() {
+        return flowerService.getFlowers();
+    }
 
-	@PostMapping("/add/")
-	public void addFlower(@RequestBody Flower flower) {
-		flowerService.add(flower);
-	}
+    @PostMapping("/add/")
+    public void addFlower(@RequestBody Flower flower) {
+        flowerService.add(flower);
+    }
 }
