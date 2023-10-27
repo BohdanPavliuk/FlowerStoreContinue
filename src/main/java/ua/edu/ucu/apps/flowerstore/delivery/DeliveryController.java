@@ -14,8 +14,8 @@ public class DeliveryController {
     
     @GetMapping("/")
     public String whatNext() {
-        return "If you are using DHL delivery" +
-        " add /dhl to your URL if Post method add /navaposhta";
+        return "If you are using DHL delivery"
+        + " add /dhl to your URL if Post method add /navaposhta";
     }
 
     @GetMapping("/dhl")

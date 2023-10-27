@@ -6,8 +6,8 @@ import ua.edu.ucu.apps.flowerstore.order.Order;
 
 public class PostDeliveryStrategy implements Delivery {
     public String orderDelivery(List<Order> orders) {
-        return "We are delivery your " +
-        orders.size() + " items by Nova Poshta"; 
+        return "We are delivery your "
+        + orders.size() + " items by Nova Poshta"; 
     }
 
 }

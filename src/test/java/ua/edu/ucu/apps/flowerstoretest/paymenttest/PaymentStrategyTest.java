@@ -10,6 +10,7 @@ import ua.edu.ucu.apps.flowerstore.payment.PayPalPaymentStrategy;
 public class PaymentStrategyTest {
     private PayPalPaymentStrategy payPalPayment;
     private CreditCardPaymentStrategy cardPayment;
+    private static final int price = 1000;
     @BeforeEach
     public void init() {
         payPalPayment = new PayPalPaymentStrategy();
@@ -18,7 +19,6 @@ public class PaymentStrategyTest {
 
     @Test
     public void testPayment() {
-        double price = 1000;
         String payment = payPalPayment.pay(price);
         String testEquals = "Paying 1000.0 tugrykiv by credit card";
         Assertions.assertEquals("Paying 1000.0 tugrykiv by paypal", payment);
